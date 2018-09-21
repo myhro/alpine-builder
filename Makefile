@@ -8,10 +8,10 @@ checksum:
 	 docker-compose run --rm app su builder -c "cd /home/builder/aports/$(PKG) && abuild checksum"
 
 clean:
-	rm -rf .abuild/ .cache/ packages/
+	rm -rf packages/
 
-keygen:
-	docker-compose run --rm app su builder -c "abuild-keygen -a -n"
+clean-all: clean
+	rm -rf .cache/
 
 shell:
 	docker-compose run --rm app sh

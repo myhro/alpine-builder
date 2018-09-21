@@ -10,7 +10,4 @@ RUN setup-apkcache /var/cache/apk
 RUN adduser -D builder
 RUN addgroup builder abuild
 RUN echo 'builder ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
-
-COPY entrypoint.sh /
-
-ENTRYPOINT ["/entrypoint.sh"]
+RUN su builder -c "abuild-keygen -a -i -n"
