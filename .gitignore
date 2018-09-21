@@ -1,0 +1,4 @@
+.abuild/
+.cache/
+aports/
+packages/

@@ -1,0 +1,11 @@
+---
+version: "3.0"
+services:
+  app:
+    build: .
+    image: myhro/alpine-builder
+    volumes:
+      - ./.abuild:/home/builder/.abuild
+      - ./.cache:/var/cache/apk
+      - ./aports:/home/builder/aports
+      - ./packages:/home/builder/packages
