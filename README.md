@@ -34,7 +34,7 @@ Built packages can be cleaned with:
 
     $ make clean
 
-Or they can be purged together with the `apk` cache:
+Or they can be purged together with their build caches:
 
     $ make clean-all
 

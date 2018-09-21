@@ -1,3 +1,4 @@
 .cache/
+.distfiles/
 aports/
 packages/

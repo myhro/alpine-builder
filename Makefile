@@ -11,7 +11,7 @@ clean:
 	rm -rf packages/
 
 clean-all: clean
-	rm -rf .cache/
+	rm -rf .cache/ .distfiles/
 
 shell:
 	docker-compose run --rm app sh
