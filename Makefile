@@ -2,16 +2,17 @@ abuild:
 	 docker-compose run --rm app su builder -c "cd /home/builder/aports/$(PKG) && abuild -f -r"
 
 build:
+	mkdir -p .cache/ .distfiles/ packages/
 	docker-compose build
 
 checksum:
 	 docker-compose run --rm app su builder -c "cd /home/builder/aports/$(PKG) && abuild checksum"
 
 clean:
-	rm -rf packages/
+	rm -rf packages/*
 
 clean-all: clean
-	rm -rf .cache/ .distfiles/
+	rm -rf .cache/* .distfiles/*
 
 shell:
 	docker-compose run --rm app sh
