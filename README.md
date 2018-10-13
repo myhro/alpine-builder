@@ -5,14 +5,14 @@ Build Alpine Linux packages using disposable Docker containers.
 
 ## Requirements
 
-Before using it, the Docker image has to be built and the package list updated:
+The [aports repository][aports] has to be cloned:
+
+    $ git clone https://github.com/alpinelinux/aports.git
+
+The Docker image has to be built and the package list updated:
 
     $ make build
     $ make update
-
-And the [aports repository][aports] should be cloned:
-
-    $ git clone https://github.com/alpinelinux/aports.git
 
 ## Usage
 
