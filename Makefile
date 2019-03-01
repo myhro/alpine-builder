@@ -20,4 +20,4 @@ shell:
 	docker-compose run --rm app sh
 
 update:
-	docker-compose run --rm app apk update
+	docker-compose run --rm app sudo apk update
